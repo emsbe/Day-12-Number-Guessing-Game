@@ -1,11 +1,9 @@
 import random
 from art import logo
 
-#generating a random number
-random_number = random.randint(1, 100)
-
 #compare function: comparing user number with random number
 def compare(random_no, user_no):
+  """Comparing user input with random number"""
   end_game = False
   if random_no > user_no:
     print("Too low.")
@@ -13,13 +11,14 @@ def compare(random_no, user_no):
   elif random_no < user_no:
     print("Too high.")
     return end_game
-  elif random_no == user_no:
+  else:
     print(f"You got it! The answer was {random_no}. Congrats!")
     end_game = True
     return end_game
 
 #playing the game in two difficulties
 def play(random_no, difficulty):
+  """game function"""
   if difficulty == "easy":
     guesses = 10
   elif difficulty == "hard":
@@ -45,6 +44,8 @@ def play(random_no, difficulty):
 print(logo)
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
+#generating a random number
+random_number = random.randint(1, 100)
 
 #user input
 user_input_difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
