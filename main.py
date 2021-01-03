@@ -2,10 +2,7 @@ import random
 from art import logo
 
 #generating a random number
-number_list = []
-for i in range(1, 101):
-  number_list.append(i)
-random_number = random.choice(number_list)
+random_number = random.randint(1, 100)
 
 #compare function: comparing user number with random number
 def compare(random_no, user_no):
